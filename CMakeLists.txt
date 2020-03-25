@@ -797,6 +797,16 @@ add_library(
     ${PROJECT_SOURCE_DIR}/src/mbgl/util/version.cpp
     ${PROJECT_SOURCE_DIR}/src/mbgl/util/version.hpp
     ${PROJECT_SOURCE_DIR}/src/mbgl/util/work_request.cpp
+    ${PROJECT_SOURCE_DIR}/include/mbgl/style/layers/location_indicator_layer.hpp
+    ${PROJECT_SOURCE_DIR}/include/mbgl/layermanager/location_indicator_layer_factory.hpp
+    ${PROJECT_SOURCE_DIR}/src/mbgl/layermanager/location_indicator_layer_factory.cpp
+    ${PROJECT_SOURCE_DIR}/src/mbgl/style/layers/location_indicator_layer.cpp
+    ${PROJECT_SOURCE_DIR}/src/mbgl/style/layers/location_indicator_layer_impl.cpp
+    ${PROJECT_SOURCE_DIR}/src/mbgl/style/layers/location_indicator_layer_impl.hpp
+    ${PROJECT_SOURCE_DIR}/src/mbgl/style/layers/location_indicator_layer_properties.cpp
+    ${PROJECT_SOURCE_DIR}/src/mbgl/style/layers/location_indicator_layer_properties.hpp
+    ${PROJECT_SOURCE_DIR}/src/mbgl/renderer/layers/render_location_indicator_layer.cpp
+    ${PROJECT_SOURCE_DIR}/src/mbgl/renderer/layers/render_location_indicator_layer.hpp
 )
 
 if(MBGL_WITH_OPENGL)
