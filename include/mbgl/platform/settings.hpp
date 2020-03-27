@@ -7,7 +7,7 @@
 namespace mbgl {
 namespace platform {
 
-#define DECLARE_MAPBOX_SETTING(name, value) constexpr const char* name = "mapbox_" #value
+#define DECLARE_MAPBOX_SETTING(name, value) constexpr const char*(name) = "mapbox_" #value
 
 // The value for EXPERIMENTAL_THREAD_PRIORITY_* keys, must be a double.
 DECLARE_MAPBOX_SETTING(EXPERIMENTAL_THREAD_PRIORITY_WORKER, thread_priority_worker);
