@@ -29,6 +29,14 @@
 
   When dem tiles are loaded, border in neighboring tiles is updated, too leading to bucket re-upload. if std::move moved indices / vertices previously, they are empty and we get crash. Re-upload requires that only DEM texture is re-uploaded, not the quad vertices and indices.
 
+- [core][tile mode] Reduce cut-off labels (part 2) ([#16369](https://github.com/mapbox/mapbox-gl-native/pull/16369))
+
+  Now, the intersecting symbols are placed across all layers _symbol by symbol_ according to the following rules:
+
+  1. First we look, which of the tile border(s) the symbol intersects and prioritize the the symbol placement accordingly (high priority -> low priority): `vertical & horizontal -> vertical -> horizontal`
+  2. For the symbols that intersect the same tile border(s), assuming the tile border split symbol into several sections, we look at the minimal section length. The symbol with a larger minimal section length is placed first.
+  3. Finally, for the symbols that intersect the same tile border(s), and have equal minimal section length, we look at the anchor Y-coordinate.
+
 ## maps-v1.5.0
 
 ### ✨ New features
