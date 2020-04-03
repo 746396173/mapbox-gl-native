@@ -1,5 +1,5 @@
 {
-    "base_test_path": "tests/probes/ttrc",
+    "base_test_path": "tests",
     "cache_path": "barcelona.db",
     "expectation_paths": [
         "expectations/platform-all",
@@ -10,7 +10,7 @@
         "ignores/platform-linux.json",
         "ignores/platform-android.json"
     ],
-    "metric_path": "android-render-test-runner/probes/ttrc",
+    "metric_path": "android-render-test-runner",
     "probes": [
         "probeTTRC"
     ],
